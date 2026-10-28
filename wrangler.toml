@@ -1,0 +1,43 @@
+# Cloudflare Workers config for Seatback. Deploying needs the owner's approval and account.
+# Secrets are NEVER put in this file. Set them with:
+#   npx wrangler secret put QLOO_API_KEY
+#   npx wrangler secret put GEMINI_API_KEY      (optional; Gemini free tier)
+#   npx wrangler secret put ADMIN_TOKEN         (random string; lets you warm judge examples)
+name = "seatback"
+main = "src/worker.ts"
+compatibility_date = "2025-09-01"
+workers_dev = true
+
+[vars]
+LLM_PROVIDER = "gemini"
+GEMINI_MODEL = "gemini-2.5-flash"
+# Cost controls (all in Qloo CALLS; quota is unknown, so these are deliberately small).
+# Custom live runs are OFF until the owner sets LIVE_ENABLED = "1" (kill switch). Examples replay from private KV.
+LIVE_ENABLED = "0"
+DAILY_CALL_CAP = "600"
+PER_VISITOR_CALL_CAP = "120"
+MAX_QLOO_CALLS_PER_RUN = "70"
+EXAMPLE_CALL_BUDGET = "130"
+# "0" turns the LLM planner off (scripted workflow only).
+PLANNER_ENABLED = "1"
+# Set by scripts/live-probe.ts's verdict: "anchored" (default) or "pinned".
+SCORING_MODE = "anchored"
+
+# Private server-side cache for Qloo responses and judge-mode examples (allowed by the developer
+# guide: "Private server-side caching is fine"). REQUIRED for a live deploy: live judge mode
+# refuses to run without it, and scripts/predeploy-check.sh fails until the id is pasted.
+#   npx wrangler kv namespace create CACHE_KV
+[[kv_namespaces]]
+binding = "CACHE_KV"
+id = ""  # set with: npx wrangler kv namespace create CACHE_KV (Cloudflare deploys only)
+
+# Edge rate limiting across isolates (Workers Rate Limiting binding). Enabled. Per visitor; period must be 10 or 60.
+# Verify the syntax against your wrangler version before deploying.
+[[ratelimits]]
+name = "RATE_LIMITER"
+namespace_id = "1001"
+simple = { limit = 6, period = 60 }
+
+# Only if LLM_PROVIDER = "workers-ai" (free daily allocation):
+# [ai]
+# binding = "AI"

@@ -1,0 +1,31 @@
+{
+  "name": "seatback",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Route-aware in-flight entertainment programming: a scripted workflow (or, when an LLM is configured, an LLM planner) that ranks a licensable catalogue for both ends of a route using Qloo taste data.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "dev": "node scripts/dev-server.ts",
+    "start": "node deploy/node.ts",
+    "record:examples": "node scripts/export-examples.ts --live",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "node scripts/run-tests.ts",
+    "eval": "node scripts/eval.ts",
+    "probe": "node scripts/live-probe.ts",
+    "presubmit": "node scripts/presubmit-check.ts",
+    "presubmit:live": "node scripts/presubmit-live.ts",
+    "request-to-result": "node scripts/request-to-result.ts",
+    "presubmit:repo": "node scripts/presubmit-repo.ts",
+    "check:counts": "node scripts/check-doc-counts.ts",
+    "call-baseline": "node scripts/call-baseline.ts",
+    "validity-ext": "node scripts/validity-ext.ts"
+  },
+  "devDependencies": {
+    "@types/node": "22.15.3",
+    "typescript": "5.8.3"
+  }
+}

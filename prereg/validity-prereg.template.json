@@ -1,0 +1,344 @@
+{
+  "schemaVersion": 1,
+  "status": "TEMPLATE",
+  "registeredAt": null,
+  "raters": {
+    "rater1": "",
+    "rater2": "",
+    "reconciliation": ""
+  },
+  "routes": [
+    [
+      "Minneapolis",
+      "Orlando"
+    ],
+    [
+      "Atlanta",
+      "Seattle"
+    ],
+    [
+      "Miami",
+      "Denver"
+    ],
+    [
+      "<<CITY 7>>",
+      "<<CITY 8>>"
+    ],
+    [
+      "<<CITY 9>>",
+      "<<CITY 10>>"
+    ],
+    [
+      "<<CITY 11>>",
+      "<<CITY 12>>"
+    ]
+  ],
+  "items": [
+    {
+      "city": "Minneapolis",
+      "domain": "artist",
+      "title": "",
+      "source": ""
+    },
+    {
+      "city": "Minneapolis",
+      "domain": "movie",
+      "title": "",
+      "source": ""
+    },
+    {
+      "city": "Minneapolis",
+      "domain": "tv_show",
+      "title": "",
+      "source": ""
+    },
+    {
+      "city": "Orlando",
+      "domain": "artist",
+      "title": "",
+      "source": ""
+    },
+    {
+      "city": "Orlando",
+      "domain": "movie",
+      "title": "",
+      "source": ""
+    },
+    {
+      "city": "Orlando",
+      "domain": "tv_show",
+      "title": "",
+      "source": ""
+    },
+    {
+      "city": "Atlanta",
+      "domain": "artist",
+      "title": "",
+      "source": ""
+    },
+    {
+      "city": "Atlanta",
+      "domain": "movie",
+      "title": "",
+      "source": ""
+    },
+    {
+      "city": "Atlanta",
+      "domain": "tv_show",
+      "title": "",
+      "source": ""
+    },
+    {
+      "city": "Seattle",
+      "domain": "artist",
+      "title": "",
+      "source": ""
+    },
+    {
+      "city": "Seattle",
+      "domain": "movie",
+      "title": "",
+      "source": ""
+    },
+    {
+      "city": "Seattle",
+      "domain": "tv_show",
+      "title": "",
+      "source": ""
+    },
+    {
+      "city": "Miami",
+      "domain": "artist",
+      "title": "",
+      "source": ""
+    },
+    {
+      "city": "Miami",
+      "domain": "movie",
+      "title": "",
+      "source": ""
+    },
+    {
+      "city": "Miami",
+      "domain": "tv_show",
+      "title": "",
+      "source": ""
+    },
+    {
+      "city": "Denver",
+      "domain": "artist",
+      "title": "",
+      "source": ""
+    },
+    {
+      "city": "Denver",
+      "domain": "movie",
+      "title": "",
+      "source": ""
+    },
+    {
+      "city": "Denver",
+      "domain": "tv_show",
+      "title": "",
+      "source": ""
+    },
+    {
+      "city": "<<CITY 7>>",
+      "domain": "artist",
+      "title": "",
+      "source": ""
+    },
+    {
+      "city": "<<CITY 7>>",
+      "domain": "movie",
+      "title": "",
+      "source": ""
+    },
+    {
+      "city": "<<CITY 7>>",
+      "domain": "tv_show",
+      "title": "",
+      "source": ""
+    },
+    {
+      "city": "<<CITY 8>>",
+      "domain": "artist",
+      "title": "",
+      "source": ""
+    },
+    {
+      "city": "<<CITY 8>>",
+      "domain": "movie",
+      "title": "",
+      "source": ""
+    },
+    {
+      "city": "<<CITY 8>>",
+      "domain": "tv_show",
+      "title": "",
+      "source": ""
+    },
+    {
+      "city": "<<CITY 9>>",
+      "domain": "artist",
+      "title": "",
+      "source": ""
+    },
+    {
+      "city": "<<CITY 9>>",
+      "domain": "movie",
+      "title": "",
+      "source": ""
+    },
+    {
+      "city": "<<CITY 9>>",
+      "domain": "tv_show",
+      "title": "",
+      "source": ""
+    },
+    {
+      "city": "<<CITY 10>>",
+      "domain": "artist",
+      "title": "",
+      "source": ""
+    },
+    {
+      "city": "<<CITY 10>>",
+      "domain": "movie",
+      "title": "",
+      "source": ""
+    },
+    {
+      "city": "<<CITY 10>>",
+      "domain": "tv_show",
+      "title": "",
+      "source": ""
+    },
+    {
+      "city": "<<CITY 11>>",
+      "domain": "artist",
+      "title": "",
+      "source": ""
+    },
+    {
+      "city": "<<CITY 11>>",
+      "domain": "movie",
+      "title": "",
+      "source": ""
+    },
+    {
+      "city": "<<CITY 11>>",
+      "domain": "tv_show",
+      "title": "",
+      "source": ""
+    },
+    {
+      "city": "<<CITY 12>>",
+      "domain": "artist",
+      "title": "",
+      "source": ""
+    },
+    {
+      "city": "<<CITY 12>>",
+      "domain": "movie",
+      "title": "",
+      "source": ""
+    },
+    {
+      "city": "<<CITY 12>>",
+      "domain": "tv_show",
+      "title": "",
+      "source": ""
+    }
+  ],
+  "decoys": [
+    {
+      "route": "Minneapolis|Orlando",
+      "domain": "movie",
+      "title": ""
+    },
+    {
+      "route": "Minneapolis|Orlando",
+      "domain": "artist",
+      "title": ""
+    },
+    {
+      "route": "Atlanta|Seattle",
+      "domain": "movie",
+      "title": ""
+    },
+    {
+      "route": "Atlanta|Seattle",
+      "domain": "artist",
+      "title": ""
+    },
+    {
+      "route": "Miami|Denver",
+      "domain": "movie",
+      "title": ""
+    },
+    {
+      "route": "Miami|Denver",
+      "domain": "artist",
+      "title": ""
+    },
+    {
+      "route": "<<CITY 7>>|<<CITY 8>>",
+      "domain": "movie",
+      "title": ""
+    },
+    {
+      "route": "<<CITY 7>>|<<CITY 8>>",
+      "domain": "artist",
+      "title": ""
+    },
+    {
+      "route": "<<CITY 9>>|<<CITY 10>>",
+      "domain": "movie",
+      "title": ""
+    },
+    {
+      "route": "<<CITY 9>>|<<CITY 10>>",
+      "domain": "artist",
+      "title": ""
+    },
+    {
+      "route": "<<CITY 11>>|<<CITY 12>>",
+      "domain": "movie",
+      "title": ""
+    },
+    {
+      "route": "<<CITY 11>>|<<CITY 12>>",
+      "domain": "artist",
+      "title": ""
+    }
+  ],
+  "filler": {
+    "movie": [],
+    "tv_show": [],
+    "artist": []
+  },
+  "null": {
+    "mode": "seeded",
+    "count": 4,
+    "seed": null
+  },
+  "rule": {
+    "clusterUsableMinItems": 2,
+    "minUsableClusters": 10,
+    "maxP": 0.05,
+    "minPooledRatePct": 65,
+    "maxNullRatePct": 60,
+    "decoyAlpha": 0.05
+  },
+  "budget": {
+    "maxCalls": 400
+  },
+  "recencyYear": 2023,
+  "notes": [
+    "Pre-registered decision rule (also written in src/agent/validity-ext.ts; the harness refuses if the two differ): a cluster is usable if at least 2 of its 3 items were scored in both city readings; fewer than 10 usable clusters is INCONCLUSIVE; a two-sided exact binomial p below 0.05 on non-tied decoy comparisons (origin end beats destination end) is INCONCLUSIVE; GO needs one-sided exact cluster sign-flip permutation p below 0.05 AND pooled success of at least 65% AND null rate of at most 60%; otherwise NO-GO.",
+    "Run once. No re-runs, no changed thresholds, no changed items after any result has been seen.",
+    "Power (simulation under assumed cluster variation, the pre-registration plan, not published here): about 82 to 85% at a true per-title rate of 75%; about 3 to 4% false positives with no effect.",
+    "Items are chosen by two independent raters following a written rater protocol that is not published here, blind to each other and to any Qloo result. Filler titles are a mechanical copy of the LIVE_SAMPLE_CATALOGUE titles in src/examples.ts, grouped by domain."
+  ]
+}

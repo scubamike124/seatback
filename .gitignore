@@ -1,0 +1,25 @@
+node_modules/
+.wrangler/
+dist/
+# Secrets: never commit keys.
+.dev.vars
+.env
+.env.*
+!.env.example
+# Real Qloo responses, live snapshots and live evaluation output.
+# The hackathon terms forbid storing Qloo response data in a public repo.
+.private/
+eval-output/
+*.live.json
+# Added for publication (public-safety audit 2026-10-25)
+.dev.vars.*
+!.dev.vars.example
+probe-*.json
+eval-live*
+*.log
+*.ndjson
+screenshots-LIVE/
+seatback-internal/
+FINAL-DEVPOST-TEXT.md
+.tmp-test/
+.data/

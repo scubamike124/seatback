@@ -1,0 +1,21 @@
+# Copy to .dev.vars for local development. .dev.vars is gitignored.
+# Never paste real keys into chat, issues, commits, screenshots or videos.
+
+# Qloo hackathon key. Works ONLY against https://hackathon.api.qloo.com (X-Api-Key header).
+# Leave empty to run on clearly synthetic fixtures.
+QLOO_API_KEY=
+
+# Optional LLM. Default provider is Gemini (free tier). Free-tier prompts may be used by
+# Google to improve products, so Seatback never sends personal data to the LLM.
+LLM_PROVIDER=gemini
+GEMINI_API_KEY=
+GEMINI_MODEL=gemini-2.5-flash
+
+# Budgets
+# Cost controls, in Qloo CALLS. Custom live runs are off unless LIVE_ENABLED=1.
+LIVE_ENABLED=0
+DAILY_CALL_CAP=600
+PER_VISITOR_CALL_CAP=120
+MAX_QLOO_CALLS_PER_RUN=70
+EXAMPLE_CALL_BUDGET=130
+PLANNER_ENABLED=1

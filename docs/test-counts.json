@@ -1,0 +1,13 @@
+{
+  "files": 41,
+  "tests": 453,
+  "pass": 444,
+  "skipped": 9,
+  "mutations": 105,
+  "killed": 105,
+  "workspacePass": 444,
+  "workspaceSkipped": 9,
+  "publicPass": 440,
+  "publicSkipped": 13,
+  "fail": 0
+}

@@ -1,0 +1,376 @@
+{
+  "schemaVersion": 1,
+  "status": "SEALED",
+  "syntheticTestFile": true,
+  "registeredAt": "synthetic-test-file (no real registration)",
+  "raters": {
+    "rater1": "synthetic test rater 1",
+    "rater2": "synthetic test rater 2",
+    "reconciliation": "none (synthetic test file)"
+  },
+  "routes": [
+    [
+      "Minneapolis",
+      "Orlando"
+    ],
+    [
+      "Atlanta",
+      "Seattle"
+    ],
+    [
+      "Miami",
+      "Denver"
+    ],
+    [
+      "Chicago",
+      "Boston"
+    ],
+    [
+      "Las Vegas",
+      "New York"
+    ],
+    [
+      "Dallas",
+      "Pittsburgh"
+    ]
+  ],
+  "items": [
+    {
+      "city": "Minneapolis",
+      "domain": "artist",
+      "title": "SYNTH item artist Minneapolis",
+      "source": "synthetic test file"
+    },
+    {
+      "city": "Minneapolis",
+      "domain": "movie",
+      "title": "SYNTH item movie Minneapolis",
+      "source": "synthetic test file"
+    },
+    {
+      "city": "Minneapolis",
+      "domain": "tv_show",
+      "title": "SYNTH item tv_show Minneapolis",
+      "source": "synthetic test file"
+    },
+    {
+      "city": "Orlando",
+      "domain": "artist",
+      "title": "SYNTH item artist Orlando",
+      "source": "synthetic test file"
+    },
+    {
+      "city": "Orlando",
+      "domain": "movie",
+      "title": "SYNTH item movie Orlando",
+      "source": "synthetic test file"
+    },
+    {
+      "city": "Orlando",
+      "domain": "tv_show",
+      "title": "SYNTH item tv_show Orlando",
+      "source": "synthetic test file"
+    },
+    {
+      "city": "Atlanta",
+      "domain": "artist",
+      "title": "SYNTH item artist Atlanta",
+      "source": "synthetic test file"
+    },
+    {
+      "city": "Atlanta",
+      "domain": "movie",
+      "title": "SYNTH item movie Atlanta",
+      "source": "synthetic test file"
+    },
+    {
+      "city": "Atlanta",
+      "domain": "tv_show",
+      "title": "SYNTH item tv_show Atlanta",
+      "source": "synthetic test file"
+    },
+    {
+      "city": "Seattle",
+      "domain": "artist",
+      "title": "SYNTH item artist Seattle",
+      "source": "synthetic test file"
+    },
+    {
+      "city": "Seattle",
+      "domain": "movie",
+      "title": "SYNTH item movie Seattle",
+      "source": "synthetic test file"
+    },
+    {
+      "city": "Seattle",
+      "domain": "tv_show",
+      "title": "SYNTH item tv_show Seattle",
+      "source": "synthetic test file"
+    },
+    {
+      "city": "Miami",
+      "domain": "artist",
+      "title": "SYNTH item artist Miami",
+      "source": "synthetic test file"
+    },
+    {
+      "city": "Miami",
+      "domain": "movie",
+      "title": "SYNTH item movie Miami",
+      "source": "synthetic test file"
+    },
+    {
+      "city": "Miami",
+      "domain": "tv_show",
+      "title": "SYNTH item tv_show Miami",
+      "source": "synthetic test file"
+    },
+    {
+      "city": "Denver",
+      "domain": "artist",
+      "title": "SYNTH item artist Denver",
+      "source": "synthetic test file"
+    },
+    {
+      "city": "Denver",
+      "domain": "movie",
+      "title": "SYNTH item movie Denver",
+      "source": "synthetic test file"
+    },
+    {
+      "city": "Denver",
+      "domain": "tv_show",
+      "title": "SYNTH item tv_show Denver",
+      "source": "synthetic test file"
+    },
+    {
+      "city": "Chicago",
+      "domain": "artist",
+      "title": "SYNTH item artist Chicago",
+      "source": "synthetic test file"
+    },
+    {
+      "city": "Chicago",
+      "domain": "movie",
+      "title": "SYNTH item movie Chicago",
+      "source": "synthetic test file"
+    },
+    {
+      "city": "Chicago",
+      "domain": "tv_show",
+      "title": "SYNTH item tv_show Chicago",
+      "source": "synthetic test file"
+    },
+    {
+      "city": "Boston",
+      "domain": "artist",
+      "title": "SYNTH item artist Boston",
+      "source": "synthetic test file"
+    },
+    {
+      "city": "Boston",
+      "domain": "movie",
+      "title": "SYNTH item movie Boston",
+      "source": "synthetic test file"
+    },
+    {
+      "city": "Boston",
+      "domain": "tv_show",
+      "title": "SYNTH item tv_show Boston",
+      "source": "synthetic test file"
+    },
+    {
+      "city": "Las Vegas",
+      "domain": "artist",
+      "title": "SYNTH item artist Las Vegas",
+      "source": "synthetic test file"
+    },
+    {
+      "city": "Las Vegas",
+      "domain": "movie",
+      "title": "SYNTH item movie Las Vegas",
+      "source": "synthetic test file"
+    },
+    {
+      "city": "Las Vegas",
+      "domain": "tv_show",
+      "title": "SYNTH item tv_show Las Vegas",
+      "source": "synthetic test file"
+    },
+    {
+      "city": "New York",
+      "domain": "artist",
+      "title": "SYNTH item artist New York",
+      "source": "synthetic test file"
+    },
+    {
+      "city": "New York",
+      "domain": "movie",
+      "title": "SYNTH item movie New York",
+      "source": "synthetic test file"
+    },
+    {
+      "city": "New York",
+      "domain": "tv_show",
+      "title": "SYNTH item tv_show New York",
+      "source": "synthetic test file"
+    },
+    {
+      "city": "Dallas",
+      "domain": "artist",
+      "title": "SYNTH item artist Dallas",
+      "source": "synthetic test file"
+    },
+    {
+      "city": "Dallas",
+      "domain": "movie",
+      "title": "SYNTH item movie Dallas",
+      "source": "synthetic test file"
+    },
+    {
+      "city": "Dallas",
+      "domain": "tv_show",
+      "title": "SYNTH item tv_show Dallas",
+      "source": "synthetic test file"
+    },
+    {
+      "city": "Pittsburgh",
+      "domain": "artist",
+      "title": "SYNTH item artist Pittsburgh",
+      "source": "synthetic test file"
+    },
+    {
+      "city": "Pittsburgh",
+      "domain": "movie",
+      "title": "SYNTH item movie Pittsburgh",
+      "source": "synthetic test file"
+    },
+    {
+      "city": "Pittsburgh",
+      "domain": "tv_show",
+      "title": "SYNTH item tv_show Pittsburgh",
+      "source": "synthetic test file"
+    }
+  ],
+  "decoys": [
+    {
+      "route": "Minneapolis|Orlando",
+      "domain": "movie",
+      "title": "SYNTH decoy Minneapolis-Orlando movie"
+    },
+    {
+      "route": "Minneapolis|Orlando",
+      "domain": "artist",
+      "title": "SYNTH decoy Minneapolis-Orlando artist"
+    },
+    {
+      "route": "Atlanta|Seattle",
+      "domain": "movie",
+      "title": "SYNTH decoy Atlanta-Seattle movie"
+    },
+    {
+      "route": "Atlanta|Seattle",
+      "domain": "artist",
+      "title": "SYNTH decoy Atlanta-Seattle artist"
+    },
+    {
+      "route": "Miami|Denver",
+      "domain": "movie",
+      "title": "SYNTH decoy Miami-Denver movie"
+    },
+    {
+      "route": "Miami|Denver",
+      "domain": "artist",
+      "title": "SYNTH decoy Miami-Denver artist"
+    },
+    {
+      "route": "Chicago|Boston",
+      "domain": "movie",
+      "title": "SYNTH decoy Chicago-Boston movie"
+    },
+    {
+      "route": "Chicago|Boston",
+      "domain": "artist",
+      "title": "SYNTH decoy Chicago-Boston artist"
+    },
+    {
+      "route": "Las Vegas|New York",
+      "domain": "movie",
+      "title": "SYNTH decoy Las Vegas-New York movie"
+    },
+    {
+      "route": "Las Vegas|New York",
+      "domain": "artist",
+      "title": "SYNTH decoy Las Vegas-New York artist"
+    },
+    {
+      "route": "Dallas|Pittsburgh",
+      "domain": "movie",
+      "title": "SYNTH decoy Dallas-Pittsburgh movie"
+    },
+    {
+      "route": "Dallas|Pittsburgh",
+      "domain": "artist",
+      "title": "SYNTH decoy Dallas-Pittsburgh artist"
+    }
+  ],
+  "filler": {
+    "movie": [
+      "Synth Filler Film 1",
+      "Synth Filler Film 2",
+      "Synth Filler Film 3",
+      "Synth Filler Film 4",
+      "Synth Filler Film 5",
+      "Synth Filler Film 6",
+      "Synth Filler Film 7",
+      "Synth Filler Film 8",
+      "Synth Filler Film 9",
+      "Synth Filler Film 10"
+    ],
+    "tv_show": [
+      "Synth Filler Series 1",
+      "Synth Filler Series 2",
+      "Synth Filler Series 3",
+      "Synth Filler Series 4",
+      "Synth Filler Series 5",
+      "Synth Filler Series 6",
+      "Synth Filler Series 7",
+      "Synth Filler Series 8",
+      "Synth Filler Series 9"
+    ],
+    "artist": [
+      "Synth Filler Act 1",
+      "Synth Filler Act 2",
+      "Synth Filler Act 3",
+      "Synth Filler Act 4",
+      "Synth Filler Act 5",
+      "Synth Filler Act 6",
+      "Synth Filler Act 7",
+      "Synth Filler Act 8",
+      "Synth Filler Act 9"
+    ]
+  },
+  "null": {
+    "mode": "seeded",
+    "count": 4,
+    "seed": 20261025
+  },
+  "rule": {
+    "clusterUsableMinItems": 2,
+    "minUsableClusters": 10,
+    "maxP": 0.05,
+    "minPooledRatePct": 65,
+    "maxNullRatePct": 60,
+    "decoyAlpha": 0.05
+  },
+  "budget": {
+    "maxCalls": 400
+  },
+  "recencyYear": 2023,
+  "notes": [
+    "Pre-registered decision rule (also written in src/agent/validity-ext.ts; the harness refuses if the two differ): a cluster is usable if at least 2 of its 3 items were scored in both city readings; fewer than 10 usable clusters is INCONCLUSIVE; a two-sided exact binomial p below 0.05 on non-tied decoy comparisons (origin end beats destination end) is INCONCLUSIVE; GO needs one-sided exact cluster sign-flip permutation p below 0.05 AND pooled success of at least 65% AND null rate of at most 60%; otherwise NO-GO.",
+    "Run once. No re-runs, no changed thresholds, no changed items after any result has been seen.",
+    "Power (simulation under assumed cluster variation, the pre-registration plan, not published here): about 82 to 85% at a true per-title rate of 75%; about 3 to 4% false positives with no effect.",
+    "Items are chosen by two independent raters following a written rater protocol that is not published here, blind to each other and to any Qloo result. Filler titles are a mechanical copy of the LIVE_SAMPLE_CATALOGUE titles in src/examples.ts, grouped by domain."
+  ]
+}

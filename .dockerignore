@@ -1,0 +1,10 @@
+node_modules
+.git
+.tmp-test
+.private
+.data
+eval-output
+.dev.vars
+test
+docs
+prereg
