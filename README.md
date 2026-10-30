@@ -22,7 +22,7 @@ It returns a slate for that route across films, TV, podcasts and music. Each pic
 
 ## Judge summary (read this first)
 
-**The story:** an airline content programmer must choose which of 35 licensable titles to load for Minneapolis to Orlando. Seatback ranks them for both end cities from Qloo taste data, before the licences are bought, shows every Qloo call behind each rank, and says plainly when it cannot tell (it withholds or abstains).
+**The story:** an airline content programmer must choose which of the 36 titles in its sample catalogue to load for Minneapolis to Orlando. Seatback ranks them for both end cities from Qloo taste data, before the licences are bought, shows every Qloo call behind each rank, and says plainly when it cannot tell (it withholds or abstains).
 
 | Question | Honest status |
 |---|---|

@@ -120,7 +120,6 @@ export const PAGE_HTML = /* html */ `<!doctype html>
       </details>
     </div>
     <div id="confirm" class="confirm" hidden></div>
-    <div id="ambig" class="ambig" hidden></div>
     <div id="planner-box" class="ambig" hidden></div>
     <div id="error" class="error" role="alert" hidden></div>
     <div id="out" hidden>
@@ -143,6 +142,7 @@ export const PAGE_HTML = /* html */ `<!doctype html>
       <div class="tabpanel" id="tab-evidence" role="tabpanel" aria-labelledby="tabbtn-evidence" tabindex="0" hidden></div>
       <div class="tabpanel" id="tab-limits" role="tabpanel" aria-labelledby="tabbtn-limits" tabindex="0" hidden></div>
     </div>
+    <div id="ambig" class="ambig" hidden></div>
   </section>
 </main>
 <footer class="foot">
