@@ -173,7 +173,7 @@ test('N5: a planner whose model is rate limited or empty falls back, labelled wi
   const llm = gemini(() => new Response('secret-ish body', { status: 429 }));
   const r = (await runPipeline(base, { qloo: createQlooClient({}, { budget: 300 }).client, llm, planner: { enabled: true }, emit: () => {} }))!;
   assert.equal(r.workflow!.kind, 'planner-fallback');
-  assert.match(r.workflow!.label, /scripted workflow \(planner stopped: llm_error: Gemini: no model answered \(gemini-2\.5-flash:429, gemini-2\.0-flash:429\)\)/);
+  assert.match(r.workflow!.label, /scripted workflow \(planner stopped: llm_error: Gemini: no model answered \(gemini-2\.5-flash:429, gemini-3\.5-flash-lite:429, gemini-3\.8-flash:429\)\)/);
   assert.ok(!JSON.stringify(r).includes('secret-ish'));
 });
 

@@ -11,14 +11,31 @@ Seatback is a route-aware programming tool for airline content programmers. Toda
 
 It returns a slate for that route across films, TV, podcasts and music. Each pick shows its rank in each city where both cities can be scored (a group that only one city can score is labelled "one city only" and shows one rank), and the Qloo calls behind that rank are printed on the card. It then uses Qloo's cross-domain graph to show **which other cities on your network** the same licences suit, an **arrival spotlight** built from the destination's distinctive taste tag, and optional **theme picks** for a programming theme you type ("holiday", "sports").
 
-**Switching to live data is one environment variable:** set `QLOO_API_KEY`. With no key, every Qloo call is answered by a synthetic fixture shaped like Qloo's documented responses, and the page says so.
+**Switching to live data is one environment variable:** set `QLOO_API_KEY` (the Qloo client was verified live once, see Live results; the whole flow has not yet been run on live data). With no key, every Qloo call is answered by a synthetic fixture shaped like Qloo's documented responses, and the page says so.
 
 > Built for the [Qloo Agentic Hackathon](https://qloo.devpost.com/). Without a hackathon key the app runs on **clearly labelled synthetic fixtures**: every title gets a "(synthetic)" suffix, every score is generated, and a banner sits on every page. The live results section below is filled in only from real runs.
 >
 > **Agentic status, stated plainly:** the hackathon asks for an agentic tool. In synthetic mode (all that can be run without a Qloo key) there is no agent behaviour: the scripted workflow is not an agent and the app says so. The LLM planner is the agentic part; it has not yet been shown working on a real model or live Qloo data.
 
-**Live demo:** https://scubamike124.github.io/seatback-demo/ (static synthetic replay of one result; no live Qloo data) · The hosted demo is a public link with no login or access token.
-**Demo video (optional; the rules do not require one):** *[pending]*
+**Demo (static synthetic replay):** https://scubamike124.github.io/seatback-demo/ (static synthetic replay of one result; no live Qloo data; source: [seatback-demo](https://github.com/scubamike124/seatback-demo)). The live Qloo path is the app in this repository, run with `QLOO_API_KEY` (see Run it) · The hosted demo is a public link with no login or access token.
+**Demo video:** none yet (the rules do not require one). The static replay above is the walkthrough; the evidence sections below say what is real and what is synthetic.
+
+## Judge summary (read this first)
+
+**The story:** an airline content programmer must choose which of 35 licensable titles to load for Minneapolis to Orlando. Seatback ranks them for both end cities from Qloo taste data, before the licences are bought, shows every Qloo call behind each rank, and says plainly when it cannot tell (it withholds or abstains).
+
+| Question | Honest status |
+|---|---|
+| Does it call the Qloo API? | The client is verified live: 3 real requests returned HTTP 200 on 2026-10-27 (details under Live results). The whole app flow on live Qloo data has **not** been run yet. |
+| What can I open right now? | A static replay of one result on **synthetic** data: https://scubamike124.github.io/seatback-demo/ . It is labelled synthetic on every screen. |
+| Agent behaviour (LLM planner, when an LLM is configured)? | The planner loop (`src/agent/planner.ts`) chooses Qloo tool calls under step and call caps. It is tested with a deterministic fake model only; it has not run on a real model. Without an LLM key the scripted workflow runs and says so. |
+| How do I run it live? | `cp .dev.vars.example .dev.vars`, add `QLOO_API_KEY`, `npm run dev`. The header pill changes from SYNTHETIC DATA to LIVE QLOO DATA. |
+| Licence | Apache-2.0 |
+
+![Seatback answer card: titles ranked for Minneapolis and Orlando, with route fit and per-city rank. Synthetic replay, not Qloo results.](docs/replay-screenshot.png)
+*Screenshot of the static replay (synthetic data, not Qloo results).*
+
+What judges can check in the app is listed under "What judges can check in the app" below. Market sources are under "The problem".
 
 ## The problem
 
@@ -83,7 +100,7 @@ Before any Qloo call, we wrote down titles strongly tied to each demo city (`src
 
 `npm run probe` runs this check, along with the pinned, open and anchored checks.
 
-**Live results:** *pending a hackathon key. This section will report whatever comes out, including a failure.*
+**Live results (client level, one earlier run; not an end-to-end app run):** on 2026-10-27 at 01:44 UTC, `scripts/qloo-minimal-probe.ts` made 3 real requests to `hackathon.api.qloo.com` with an event key: `/search` (a place name that appears nowhere in this repository) returned HTTP 200 with 5 entities; the same request repeated returned HTTP 200 with 5 entities and a later server `Date` header (so it was not cached); `/v2/insights` for movies with a location signal returned HTTP 200 with 3 entities, at least one with a numeric affinity. None carried a synthetic mark and none matched the fixture answer. The probe's overall verdict was **FAIL**, for one reason only: a fourth, deliberately unsupported request (`urn:heatmap`) was expected to return an error but returned HTTP 200 with 255 entities, so the probe's error-path check did not run live (offline tests cover it). No Qloo response data is stored in this repository (the terms forbid it). **Not yet shown:** the full Seatback slate computed from live data, the validity check on live data, and the planner on a real model. Reproduce with your own key: `npm run probe:min -- --yes`.
 
 On synthetic fixtures the check fails, as it should, because the fixture world has no real hometowns: 11 of 18, permutation p = 0.25, null 41 of 80.
 
@@ -176,8 +193,8 @@ test/            node:test suites (no network; the live client is tested with a 
 
 ## Hackathon notes
 
-- **New project:** the earliest commit of Seatback's source is dated 2026-10-24 (source history before this repository was created is private), inside the hackathon period of Sep 30 to Oct 30, 2026 ([official rules](https://qloo.devpost.com/rules), [Qloo resources page](https://www.qloo.com/resources)). **[OWNER TO FILL IN before publishing: the date this public repository was created.]**
-- **Testing access:** the static synthetic replay is live at https://scubamike124.github.io/seatback-demo/ and needs no login or key
+- **New project:** the earliest commit of Seatback's source is dated 2026-10-24 (source history before this repository was created is private), inside the hackathon period of Sep 30 to Oct 30, 2026 ([official rules](https://qloo.devpost.com/rules), [Qloo resources page](https://www.qloo.com/resources)). This public repository was created on 2026-10-28.
+- **Testing access:** the static synthetic replay is live at https://scubamike124.github.io/seatback-demo/ and needs no login or key. The official rules ([Testing](https://qloo.devpost.com/rules)) require the project to stay available free of charge and without restriction until the Judging Period ends (Nov 5, 2026, 11:45 pm ET); the replay is intended to stay up until then
 - **Reproducing live results:** you need your own Qloo hackathon key (see Run it). Without one, everything runs on synthetic fixtures, which are labelled as such on screen and never presented as Qloo results.
 - **Qloo endpoints used:** `/search`, `/v2/tags`, `/v2/insights` (movie, TV, podcast and artist entities with location, anchor, `filter.results.entities` and `filter.tags`; `urn:entity:destination`; `urn:tag` taste analysis; `urn:demographics`) and `/v2/trending`, all on `https://hackathon.api.qloo.com`. The legacy `/recs` and `/recommendations` endpoints are not used. See `docs/QLOO-NOTES.md`.
 
@@ -187,7 +204,7 @@ This project was built with AI coding assistance (Anthropic's Claude, via Claude
 
 ## License
 
-MIT. See [LICENSE](LICENSE). Not affiliated with Qloo, any airline or any content service provider.
+Apache-2.0. See [LICENSE](LICENSE). Not affiliated with Qloo, any airline or any content service provider.
 
-## What is tested (2026-10-25, offline, no keys)
-<!-- current --> 41 test files, 453 tests, 0 fail. <!-- current --> Full workspace: 444 pass, 9 skipped. <!-- current --> Public repo, a fresh clone of the published files: 440 pass, 13 skipped. The skips are the live Qloo contract tests and the live-LLM planner smoke test, which need keys and print why they skip, plus tests that need internal files or folders that are not published (they are reported as skipped, never as passed). The workspace count needs the sibling `research/` folder of the full workspace; a copy without it skips one more test and passes one fewer, and the public repo never has it. Exactly: a public repo run without a sibling `research/` folder gives the counts above, and with it one more test passes and one fewer is skipped (the rules-facts test skips only when `research/` is absent). `node scripts/mutate-guards.ts` applies <!-- current --> 105 one-line mutations to the critical guards (call and LLM budgets, kill switch, recorder gate, input checks, planner limits, note validator, Deno counter) and requires every one to be caught: <!-- current --> 105 of 105 in one run of the published files by the author (about 7 minutes; re-run it to confirm, it is not part of `npm test`). The planner tests use a deterministic fake model, so they prove the loop's mechanics and guards, not any real model's plan quality. Nothing here has been run against live Qloo.
+## What is tested (offline, no keys; counts re-run 2026-10-30)
+<!-- current --> 46 test files, 512 tests, 0 fail. <!-- current --> Full workspace: 503 pass, 9 skipped. <!-- current --> Public repo, a fresh clone of the published files: 499 pass, 13 skipped. The skips are the live Qloo contract tests and the live-LLM planner smoke test, which need keys and print why they skip, plus tests that need internal files or folders that are not published (they are reported as skipped, never as passed). The workspace count needs the sibling `research/` folder of the full workspace; a copy without it skips one more test and passes one fewer, and the public repo never has it. Exactly: a public repo run without a sibling `research/` folder gives the counts above, and with it one more test passes and one fewer is skipped (the rules-facts test skips only when `research/` is absent). `node scripts/mutate-guards.ts` applies <!-- current --> 105 one-line mutations to the critical guards (call and LLM budgets, kill switch, recorder gate, input checks, planner limits, note validator, Deno counter) and requires every one to be caught: <!-- current --> 105 of 105 in one run of the published files by the author (about 7 minutes; re-run it to confirm, it is not part of `npm test`). The planner tests use a deterministic fake model, so they prove the loop's mechanics and guards, not any real model's plan quality. Nothing here has been run against live Qloo.

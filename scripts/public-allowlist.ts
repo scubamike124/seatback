@@ -33,6 +33,7 @@ export const ALLOW: Rule[] = [
   { re: /^deploy\/[^/]+\.ts$/, why: 'hosting entry points and the owner smoke app' },
   { re: /^scripts\/[^/]+\.(ts|sh)$/, why: 'run, test, probe, presubmit and deploy-check scripts' },
   { re: /^test\/.+\.(ts|mjs|json)$/, why: 'tests, fakes and synthetic fixtures (required for npm test)' },
+  { re: /^docs\/replay-screenshot\.png$/, why: 'screenshot of the static synthetic replay, shown in the README' },
   { re: /^docs\/(QLOO-NOTES|REQUEST-TO-RESULT\.MOCK-SAMPLE|FIXTURES|THIRD-PARTY-AND-PROVENANCE|DEPLOY-RAILWAY|IPHONE-DEMO-INSTRUCTIONS)\.md$/, why: 'documentation the README and judges rely on' },
   { re: /^docs\/test-counts\.json$/, why: 'last real test and mutation counts (checked against the docs)' },
   { re: /^prereg\/validity-prereg\.template\.json$/, why: 'empty pre-registration template used by the validity scripts and tests' },

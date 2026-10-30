@@ -275,7 +275,7 @@ export class HttpQlooClient implements QlooClient {
         const res = await this.#fetch(url, {
           method: 'GET',
           headers: { 'X-Api-Key': this.#key, Accept: 'application/json' },
-          signal: AbortSignal.timeout(this.#timeoutMs),
+          redirect: 'manual', signal: AbortSignal.timeout(this.#timeoutMs),
         });
         if (res.ok) {
           let json: unknown;
@@ -331,6 +331,8 @@ function asArray<T>(v: unknown): T[] {
 
 function classify(status: number, path: string): QlooError {
   // Messages never include the key or the full URL.
+  // A 3xx is never followed (redirect: 'manual' on the request): following one could send the key to another host. No Location value is kept.
+  if (status >= 300 && status < 400) return new QlooError(`Qloo answered ${path} with a redirect (HTTP ${status}); redirects are never followed.`, status, 'bad_request');
   if (status === 401) {
     return new QlooError(
       `Qloo rejected the key (401) on ${path}. Check that the key is the hackathon key and the base URL is hackathon.api.qloo.com.`,
