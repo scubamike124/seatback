@@ -17,8 +17,10 @@ It returns a slate for that route across films, TV, podcasts and music. Each pic
 >
 > **Agentic status, stated plainly:** the hackathon asks for an agentic tool. In synthetic mode (all that can be run without a Qloo key) there is no agent behaviour: the scripted workflow is not an agent and the app says so. The LLM planner is the agentic part; it has not yet been shown working on a real model or live Qloo data.
 
+**Interactive demo (hosted app, SYNTHETIC mode):** https://seatback-production.up.railway.app (the real app running on invented fixture data; no Qloo key is configured there, custom live runs are off, and every screen is labelled synthetic; verified 2026-10-30 with `node scripts/verify-deployed.ts`).
+
 **Demo (static synthetic replay):** https://scubamike124.github.io/seatback-demo/ (static synthetic replay of one result; no live Qloo data; source: [seatback-demo](https://github.com/scubamike124/seatback-demo)). The live Qloo path is the app in this repository, run with `QLOO_API_KEY` (see Run it) · The hosted demo is a public link with no login or access token.
-**Demo video:** none yet (the rules do not require one). The static replay above is the walkthrough; the evidence sections below say what is real and what is synthetic.
+**Demo video:** a 79-second silent, captioned recording of the replay (synthetic data, no Qloo call) is embedded at https://scubamike124.github.io/seatback-demo/ (the rules do not require a video). The replay and the hosted app are the walkthrough; the evidence sections below say what is real and what is synthetic.
 
 ## Judge summary (read this first)
 
@@ -27,7 +29,7 @@ It returns a slate for that route across films, TV, podcasts and music. Each pic
 | Question | Honest status |
 |---|---|
 | Does it call the Qloo API? | The client is verified live: 3 real requests returned HTTP 200 on 2026-10-27 (details under Live results). The whole app flow on live Qloo data has **not** been run yet. |
-| What can I open right now? | A static replay of one result on **synthetic** data: https://scubamike124.github.io/seatback-demo/ . It is labelled synthetic on every screen. |
+| What can I open right now? | The hosted app on **synthetic** data: https://seatback-production.up.railway.app , and a static replay of one result: https://scubamike124.github.io/seatback-demo/ . Both are labelled synthetic on every screen. |
 | Agent behaviour (LLM planner, when an LLM is configured)? | The planner loop (`src/agent/planner.ts`) chooses Qloo tool calls under step and call caps. It is tested with a deterministic fake model only; it has not run on a real model. Without an LLM key the scripted workflow runs and says so. |
 | How do I run it live? | `cp .dev.vars.example .dev.vars`, add `QLOO_API_KEY`, `npm run dev`. The header pill changes from SYNTHETIC DATA to LIVE QLOO DATA. |
 | Licence | Apache-2.0 |
