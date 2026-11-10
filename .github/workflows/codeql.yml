@@ -1,6 +1,10 @@
 name: CodeQL
 
 on:
+  # Analyze main on every push too: pull-request results are compared with main's latest analysis, and without this main was
+  # only analyzed by the weekly schedule.
+  push:
+    branches: [main]
   pull_request:
     branches: [main]
   schedule:
