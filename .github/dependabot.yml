@@ -1,13 +1,14 @@
-# Dependency security updates (free). Weekly, max 5 open PRs per ecosystem.
+# Security updates only. open-pull-requests-limit: 0 turns off routine version-update PRs, so only
+# Dependabot security PRs open (needs "Dependabot security updates" on in repo settings). Keeps Actions minutes flat.
 version: 2
 updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "weekly"
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 0
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 0
