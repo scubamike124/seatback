@@ -27,6 +27,7 @@ export const ALLOW: Rule[] = [
   { re: /^tsconfig\.json$/, why: 'typecheck configuration' },
   { re: /^wrangler\.toml$/, why: 'Cloudflare Workers configuration (fallback host)' },
   { re: /^\.gitignore$/, why: 'keeps keys, recordings and Qloo data out of the repo' },
+  { re: /^\.github\/(dependabot\.yml|workflows\/codeql\.yml)$/, why: 'Dependabot security updates and CodeQL code scanning (no secrets)' },
   { re: /^(Dockerfile|\.dockerignore|railway\.json)$/, why: 'container/Railway start configuration (no secrets)' },
   { re: /^\.dev\.vars\.example$/, why: 'template for local settings (no values)' },
   { re: /^src\/.+\.ts$/, why: 'application source (required to run)' },
